@@ -839,13 +839,26 @@ footer .logo {
 }
 
 .modal-policy {
+   display: flex;
+   align-items: center;
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
-}
+  }
 
 .link-modal-policy {
    color: var(--color-accent);
    text-decoration-skip-ink: none;
+}
+
+.modal-policy::before {
+   content: "";
+   display: inline-block;
+   margin-right: 8px;
+   width: 16px;
+   height: 15px;
+   border: 2px solid var(--color-title);
+   border-radius: 2px;
+   background-image: ;
 }
 /* End модальное окно */
