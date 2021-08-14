@@ -841,10 +841,13 @@ footer .logo {
 .modal-policy {
    display: flex;
    align-items: center;
+   justify-content: center;
+   margin-top: 20px;
    font-size: 14px;
    line-height: 1.71;
    letter-spacing: 0.03em;
-  }
+
+}
 
 .link-modal-policy {
    color: var(--color-accent);
@@ -854,11 +857,18 @@ footer .logo {
 .modal-policy::before {
    content: "";
    display: inline-block;
-   margin-right: 8px;
+   margin-right: 7px;
    width: 16px;
    height: 15px;
    border: 2px solid var(--color-title);
    border-radius: 2px;
-   background-image: ;
+}
+
+.modal-checkbox:checked ~ .modal-policy::before {
+   background-image: url(../image/icon-home-work-6/icon-check-two.svg);
+   background-color: var(--color-accent);
+   border-color: var(--color-accent);
+   background-size: contain;
+   background-origin: border-box;
 }
 /* End модальное окно */
