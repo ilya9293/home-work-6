@@ -462,8 +462,12 @@
                Комментарий
                <textarea name="user-coment" class="modal-coment" placeholder="Введите текст"></textarea>
             </label>
-            <input type="checkbox" name="agree-policy" id="policy" required class="modal-checkbox visually-hidden">
-            <label for="policy" class="modal-policy">Соглашаюсь с рассылкой и принимаю&nbsp
+            <label class="modal-policy">
+               <input type="checkbox" name="agree-policy" required class="modal-checkbox visually-hidden">
+               <svg class="form-modal-check-icon" width="16" height="15">
+                  <use href="./image/icons.svg#icon-icon-check-two"></use>
+               </svg>
+               Соглашаюсь с рассылкой и принимаю&nbsp
                <a href="" target="blank" rel="noopener noreferrer" class="link-modal-policy">Условия договора</a>
             </label>
             <button type="submit" class="modal-form-bt">Отправить</button>

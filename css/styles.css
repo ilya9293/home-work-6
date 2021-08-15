@@ -647,7 +647,6 @@ footer .logo {
    color: #ffffff;
 }
 
-
 /* Portfolio */
 .list-button {
    display: flex;
@@ -919,7 +918,8 @@ footer .logo {
    text-decoration-skip-ink: none;
 }
 
-.modal-policy::before {
+/* Способ через бефор и бекграунд имейдж */
+/* .modal-policy::before {
    content: "";
    display: inline-block;
    margin-right: 7px;
@@ -936,6 +936,18 @@ footer .logo {
    border-color: var(--color-accent);
    background-size: contain;
    background-origin: border-box;
+} */
+
+.form-modal-check-icon {
+   margin-right: 7px;
+   border: 2px solid var(--color-title);
+   border-radius: 2px;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:checked + .form-modal-check-icon {
+   background-color: var(--color-accent);
+   border: none;
 }
 
 .modal-form-bt {
