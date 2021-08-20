@@ -511,10 +511,24 @@ footer .logo {
    margin-right: 70px;
 }
 
-.item-contact {
+.list-contact__item:not(:first-child) {
    margin-top: 9px;
 }
 
+.list-contact__link {
+   font-size: 14px;
+   line-height: 1.71;
+   letter-spacing: 0.03em;
+   font-style: normal;
+}
+
+.list-contact__link_theme_light {
+   color: #ffffff;
+}
+
+.list-contact__link_theme_dark {
+   color: rgba(255, 255, 255, 0.6);
+}
 .link-adress {
    font-size: 14px;
    line-height: 1.71;
@@ -539,7 +553,7 @@ footer .logo {
    margin-right: 93px;
 }
 
-.footer-title {
+.footer-join__title {
    display: block;
    margin-bottom: 20px;
 
@@ -563,12 +577,12 @@ footer .logo {
    fill: #ffffff;
 }
 
-.form-footer-sign-mail {
+.form-footer-sign {
    display: flex;
    align-items: flex-end;
 }
 
-.invite-sign {
+.form-footer-sign__invite {
    display: flex;
    flex-direction: column;
    font-weight: 700;
@@ -580,7 +594,7 @@ footer .logo {
    color: #ffffff;
 }
 
-.footer-field-mail {
+.form-footer-sign__field {
    width: 358px;
    height: 50px;
    border: 1px solid rgba(255, 255, 255, 0.3);
@@ -593,7 +607,7 @@ footer .logo {
    color: #ffffff;
 }
 
-.footer-field-mail::placeholder {
+.form-footer-sign__field::placeholder {
    font-size: 16px;
    line-height: 1.25;
    letter-spacing: 0.03em;
@@ -609,18 +623,21 @@ footer .logo {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
+}
+
+.list-button_position {
    margin-bottom: 50px;
 }
 
-.item-list-button {
+.list-button__item {
    margin-left: 8px;
 }
 
-.item-list-button:first-child {
+.list-button__item:first-child {
    margin-left: 0;
 }
 
-.button-portfolio {
+.list-button__btn {
    padding: 6px 22px;
 
    background: #f5f4fa;
@@ -638,8 +655,8 @@ footer .logo {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button-portfolio:hover,
-.button-portfolio:focus {
+.list-button__btn:hover,
+.list-button__btn:focus {
    color: #ffffff;
    background-color: var(--color-accent);
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -654,38 +671,38 @@ footer .logo {
    /* justify-content: space-between; */
 }
 
-.item-cards {
+.list-cards__item {
    margin-top: 30px;
    margin-left: 30px;
    flex-basis: calc((100% - 90px) / 3);
 }
 
-.link-cards {
+.list-cards__link {
    display: block;
 
    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-cards:hover,
-.link-cards:focus {
+.list-cards__link:hover,
+.list-cards__link:focus {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
    outline: none;
 }
 
-/* .item-cards:not(:nth-last-child(-n + 3)) {
+/* .list-cards__item:not(:nth-last-child(-n + 3)) {
    margin-bottom: 30px;
 }
 
-.item-cards:nth-child(3n) {
+.list-cards__item:nth-child(3n) {
    margin-right: 0;
 } Другой способ*/
 
-.block-portfolio-cards {
+.list-cards__container-description {
    padding: 20px 24px;
    border: 1px solid #eeeeee;
 }
 
-.title-cards {
+.list-cards__title {
    margin-bottom: 4px;
 
    font-size: 18px;
@@ -693,19 +710,19 @@ footer .logo {
    letter-spacing: 0.06em;
    color: var(--color-title);
 }
-.description-cards {
+.list-cards__description {
    font-size: 16px;
    line-height: 1.87;
    letter-spacing: 0.03em;
    color: var(--color-main);
 }
 
-.container-overlay {
+.list-cards__container-overlay {
    position: relative;
    overflow: hidden;
 }
 
-.overley-portfolio {
+.list-cards__overlay-text {
    position: absolute;
    height: 100%;
    width: 100%;
@@ -721,8 +738,8 @@ footer .logo {
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-cards:hover .overley-portfolio,
-.link-cards:focus .overley-portfolio {
+.list-cards__link:hover .list-cards__overlay-text,
+.list-cards__link:focus .list-cards__overlay-text {
    transform: translateY(-100%);
 }
 /* End portfolio */
@@ -764,7 +781,7 @@ footer .logo {
    transform: translate(-50%, -50%) scale(1.2);
 }
 
-.button-backdrop-icon {
+.modal-backdrop__button {
    display: block;
    position: absolute;
    width: 30px;
@@ -778,7 +795,7 @@ footer .logo {
    background-color: transparent;
 }
 
-.modal-icon {
+.modal-backdrop__icon {
    position: absolute;
    left: 50%;
    top: 50%;
@@ -786,8 +803,8 @@ footer .logo {
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-backdrop-icon:focus .modal-icon,
-.button-backdrop-icon:hover .modal-icon {
+.modal-backdrop__button:focus .modal-backdrop__icon,
+.modal-backdrop__button:hover .modal-backdrop__icon {
    fill: var(--color-accent);
 }
 
@@ -796,7 +813,7 @@ footer .logo {
    flex-direction: column;
 }
 
-.modal-form-head {
+.modal-form__head {
    font-size: 20px;
    line-height: 1.15;
    text-align: center;
@@ -805,19 +822,19 @@ footer .logo {
    color: var(--color-title);
 }
 
-.name-modal-label {
+.modal-form__label {
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.01em;
    margin-top: 12px;
 }
 
-.modal-input:focus {
+.modal-form__field:focus {
    outline: none;
    border-color: var(--color-accent);
 }
 
-.modal-input {
+.modal-form__field {
    height: 40px;
    padding-left: 42px;
    width: 100%;
@@ -826,12 +843,12 @@ footer .logo {
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.container-input-icon {
+.modal-form__container {
    position: relative;
    margin-top: 4px;
 }
 
-.form-modal-icon {
+.modal-form__icon {
    position: absolute;
    top: 50%;
    left: 12px;
@@ -839,11 +856,11 @@ footer .logo {
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus + .form-modal-icon {
+.modal-form__field:focus + .modal-form__icon {
    fill: var(--color-accent);
 }
 
-.modal-coment {
+.modal-form__coment {
    width: 100%;
    height: 120px;
    resize: none;
@@ -854,19 +871,19 @@ footer .logo {
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-coment::placeholder {
+.modal-form__coment::placeholder {
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.01em;
    color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-coment:focus {
+.modal-form__coment:focus {
    outline: none;
    border-color: var(--color-accent);
 }
 
-.modal-policy {
+.modal-form__policy {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -876,13 +893,13 @@ footer .logo {
    letter-spacing: 0.03em;
 }
 
-.link-modal-policy {
+.modal-form__link-policy {
    color: var(--color-accent);
    text-decoration-skip-ink: none;
 }
 
 /* Способ через бефор и бекграунд имейдж */
-/* .modal-policy::before {
+/* .modal-form__policy::before {
    content: "";
    display: inline-block;
    margin-right: 7px;
@@ -893,7 +910,7 @@ footer .logo {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox:checked + .modal-policy::before {
+.modal-form__checkbox:checked + .modal-form__policy::before {
    background-image: url(../image/icon-home-work-6/icon-check-two.svg);
    background-color: var(--color-accent);
    border-color: var(--color-accent);
@@ -901,23 +918,23 @@ footer .logo {
    background-origin: border-box;
 } */
 
-.form-modal-check-icon {
+.modal-form__check-icon {
    margin-right: 7px;
    border: 2px solid var(--color-title);
    border-radius: 2px;
 }
 
-.modal-checkbox:checked + .form-modal-check-icon {
+.modal-form__checkbox:checked + .modal-form__check-icon {
    background-color: var(--color-accent);
    border: none;
 }
 
-.modal-checkbox:focus + .form-modal-check-icon {
+.modal-form__checkbox:focus + .modal-form__check-icon {
    outline: 1px solid var(--color-accent);
    outline-offset: 2px;
 }
 
-.modal-checkbox:focus:checked + .form-modal-check-icon {
+.modal-form__checkbox:focus:checked + .modal-form__check-icon {
    outline: 1px solid var(--color-title);
 }
 
